@@ -22,7 +22,7 @@ def main():
         translation_config.speech_recognition_language = 'en-US'
         translation_config.add_target_language('fr')
         translation_config.add_target_language('es')
-        translation_config.add_target_language('cn')
+        translation_config.add_target_language('zh')
         print('Ready to translate from',translation_config.speech_recognition_language)
 
         # Configure speech
@@ -60,7 +60,7 @@ def Translate(targetLanguage):
     voices = {
         "fr": "fr-FR-HenriNeural",
         "es": "es-ES-ElviraNeural",
-        "hi": "hi-IN-MadhurNeural"
+        "zh": "zh-CN-XiaoyanNeural"
     }
     speech_config.speech_synthesis_voice_name = voices.get(targetLanguage)
     speech_synthesizer = speech_sdk.SpeechSynthesizer(speech_config)
